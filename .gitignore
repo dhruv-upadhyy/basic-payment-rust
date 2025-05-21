@@ -1,1 +1,14 @@
-/target
+/target/
+
+.vscode/
+
+.env
+
+Cargo.lock
+
+**/*.rs.bk
+
+*.pdb
+
+.DS_Store
+Thumbs.db
