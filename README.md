@@ -1,9 +1,9 @@
-# Dodo Payment Task
+# Dodo Payment Assignment
 
 ## Features
 
 - **User Management**: Registration, authentication, and profile management
-- **Account Management**: Create and manage multiple accounts with different currencies
+- **Account Management**: Create and manage multiple accounts
 - **Transaction Processing**: Perform deposits and withdrawals, with transaction history
 - **Security**: JWT-based authentication, rate limiting, data validation, and error handling
 
@@ -27,7 +27,7 @@
    cd dodo-assignment-rust
    ```
 
-2. Add `.env` file with the following format:
+2. Create `.env` file with the following format:
    ```bash
     # Database configuration
     POSTGRES_USER=test_user
@@ -52,7 +52,7 @@
 
 ### Running Locally
 
-1. Add `.env` file with the following format:
+1. Create `.env` file with the following format:
    ```bash
     # Database configuration
     POSTGRES_USER=test_user
@@ -69,7 +69,7 @@
     API_PORT=3000
    ```
 
-2. Create tables provided in the SQL schema `src/db/ddl.sql` in POSTGRES_DB:
+2. Create tables provided in the SQL schema [`src/db/ddl.sql`]([src/db/ddl.sql](https://github.com/dhruv-upadhyy/dodo-assignment-rust/blob/main/src/db/ddl.sql)) in POSTGRES_DB:
 
 4. Build and run the application:
    ```bash
@@ -79,13 +79,13 @@
 
 ## API Documentation
 
-OpenAPI documentation:  `docs/openapi.yml`.
+OpenAPI documentation:  [`docs/openapi.yml`](https://github.com/dhruv-upadhyy/dodo-assignment-rust/blob/main/docs/openapi.yml).
 
-All the cURL commands for testing the API endpoints:  `docs/api_call.md`.
+All the cURL commands for testing the API endpoints:  [`docs/api_call.md`](https://github.com/dhruv-upadhyy/dodo-assignment-rust/blob/main/docs/api_calls.md).
 
 ## Authentication
 
-JWT-based authentication is implemented. Use the `/users/login` endpoint to obtain a token, then include it in subsequent requests:
+Use `/users/login` endpoint to obtain a JWT token, then include it in subsequent requests:
 
 ```
 Authorization: Bearer <token>
