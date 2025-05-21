@@ -69,9 +69,9 @@
     API_PORT=3000
    ```
 
-2. Create tables provided in the SQL schema [`src/db/ddl.sql`]([src/db/ddl.sql](https://github.com/dhruv-upadhyy/dodo-assignment-rust/blob/main/src/db/ddl.sql) in POSTGRES_DB:
+2. Create tables provided in the SQL schema [`src/db/ddl.sql`](https://github.com/dhruv-upadhyy/dodo-assignment-rust/blob/main/src/db/ddl.sql) in `POSTGRES_DB` (configured in .env):
 
-4. Build and run the application:
+3. Build and run the application:
    ```bash
    cargo build
    cargo run
