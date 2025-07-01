@@ -1,33 +1,8 @@
-# Dodo Payment Assignment
-
-## Features
-
-- **User Management**: Registration, authentication, and profile management
-- **Account Management**: Create and manage multiple accounts
-- **Transaction Processing**: Perform deposits and withdrawals, with transaction history
-- **Security**: JWT-based authentication, rate limiting, data validation, and error handling
-
-## Tech Stack
-
-- **Axum**: Web framework
-- **PostgreSQL**: Relational database
-- **Deadpool**: PostgreSQL connection pooling
-- **jsonwebtoken**: JWT authentication
-- **Tower-http**: Middleware
-- **Tracing**: Logging
-
-
-## Setup
+# Rust based Payment System 
 
 ### Running with Docker
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd dodo-assignment-rust
-   ```
-
-2. Create `.env` file with the following format:
+1. Create `.env` file with the following format:
    ```bash
     # Database configuration
     POSTGRES_USER=test_user
@@ -71,10 +46,9 @@
 
 2. Create tables provided in the SQL schema [`src/db/ddl.sql`](https://github.com/dhruv-upadhyy/dodo-assignment-rust/blob/main/src/db/ddl.sql) in `POSTGRES_DB` (configured in .env):
 
-3. Build and run the application:
+3. Run the application:
    ```bash
-   cargo build
-   cargo run
+   cargo run --release
    ```
 
 ## API Documentation
@@ -82,18 +56,3 @@
 OpenAPI documentation:  [`docs/openapi.yml`](https://github.com/dhruv-upadhyy/dodo-assignment-rust/blob/main/docs/openapi.yml).
 
 All the cURL commands for testing the API endpoints:  [`docs/api_call.md`](https://github.com/dhruv-upadhyy/dodo-assignment-rust/blob/main/docs/api_calls.md).
-
-## Authentication
-
-Use `/users/login` endpoint to obtain a JWT token, then include it in subsequent requests:
-
-```
-Authorization: Bearer <token>
-```
-
-The token expires after 24 hours by default (configurable via JWT_EXPIRATION).
-
-## Rate Limiting
-
-By default, 100 requests are allowed per minute per IP address.
-
